@@ -1,0 +1,3 @@
+{"expected": {"one": 5, "two": 5}, "arguments": [["one", "two"], 5, 5.1]}
+{"expected": {"one": 3}, "arguments": [["one"], 3]}
+{"check": "Good job!"}

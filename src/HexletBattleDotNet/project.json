@@ -1,0 +1,28 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "HexletBattleDotNet",
+  "authors": [ "Dmitriy Startsev" ],
+  "tags": [ "hexlet", "battle" ],
+  "projectUrl": "https://github.com/dstarcev/HexletBattleDotNet",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Newtonsoft.Json": "8.0.2",
+    "NUnit": "3.0.1",
+    "System.Console": "4.0.0-beta-*",
+    "System.Linq": "4.0.1-beta-*",
+    "System.Dynamic.Runtime": "4.0.11-beta-*"
+  },
+
+  "commands": {
+    "HexletBattleDotNet": "HexletBattleDotNet"
+  },
+
+  "frameworks": {
+    "dnxcore50": {}
+  }
+}
