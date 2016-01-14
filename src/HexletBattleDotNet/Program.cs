@@ -22,7 +22,7 @@ public class Program {
 			var solution = SolutionClass.Solution((IList<object>)testCase["arguments"]);
 			var solutionJson = ToJson(solution);
 
-			Assert.AreEqual(expectedJson, solutionJson, $"Arguments was {argumentsJson}");
+			Assert.AreEqual(expectedJson, solutionJson, $"Arguments were {argumentsJson}");
 		}
 
 		return 1;
