@@ -16,20 +16,20 @@ public class Program {
 				Console.WriteLine(testCase["check"]);
 				return 0;
 			}
+			
+			var argumentsJson = ToJson(testCase["arguments"]);
+			var expectedJson = ToJson(testCase["expected"]);
+			var solution = SolutionClass.Solution((IList<object>)testCase["arguments"]);
+			var solutionJson = ToJson(solution);
 
-			try {
-				var actual = SolutionClass.Solution((IList<object>)testCase["arguments"]);
-				var actualJson = JsonConvert.SerializeObject(actual);
-				var expectedJson = JsonConvert.SerializeObject(testCase["expected"]);
-				Assert.AreEqual(expectedJson, actualJson);
-			}
-			catch (Exception ex) {
-				Console.WriteLine(ex);
-				break;
-			}
+			Assert.AreEqual(expectedJson, solutionJson, $"Arguments was {argumentsJson}");
 		}
 
 		return 1;
+	}
+
+	private static string ToJson(object obj) {
+		return JsonConvert.SerializeObject(obj);
 	}
 
 	private static IEnumerable<string> GetStdinLines() {
