@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 
 public class Program {
-	public static int Main(string[] args) {
+	static int Main(string[] args) {
 		var cases = GetStdinLines()
 			.Select(JsonConvert.DeserializeObject<ExpandoObject>);
 
@@ -16,7 +16,7 @@ public class Program {
 				Console.WriteLine(testCase["check"]);
 				return 0;
 			}
-			
+
 			var argumentsJson = ToJson(testCase["arguments"]);
 			var expectedJson = ToJson(testCase["expected"]);
 			var solution = SolutionClass.Solution((IList<object>)testCase["arguments"]);

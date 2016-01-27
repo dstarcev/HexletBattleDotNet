@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "HexletBattleDotNet": {
-      "commandName": "HexletBattleDotNet",
-      "commandLineArgs": "< data.json"
-    }
-  }
-}
